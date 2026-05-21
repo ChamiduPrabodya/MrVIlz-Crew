@@ -1,52 +1,55 @@
 const services = [
   {
-    id: "01",
-    title: "Social Media Strategy",
-    text: "Build a consistent presence across TikTok, Instagram, Facebook, and YouTube with clear campaigns and stronger brand direction."
+    number: "01",
+    title: "Brand Campaign Strategy",
+    text: "Shape a clear public identity for Mr Vilz across every platform with messaging that connects environmental action and audience growth."
   },
   {
-    id: "02",
+    number: "02",
     title: "Content Production",
-    text: "Turn beach cleaning, planting events, and community stories into professional content that people remember and share."
+    text: "Turn clean-up days, planting drives, and volunteer stories into sharper short-form and long-form content."
   },
   {
-    id: "03",
-    title: "Campaign Promotion",
-    text: "Launch focused awareness campaigns that connect followers to real environmental impact."
+    number: "03",
+    title: "Community Promotion",
+    text: "Promote events, grow visibility, and help supporters feel part of a real environmental movement."
   }
 ];
 
 const projects = [
   {
-    name: "Beach Cleaning Program",
-    description: "Community clean-up coverage, awareness posts, and visual storytelling that keeps the mission visible."
+    title: "Beach Cleaning",
+    tag: "Community Action",
+    text: "Document coastal clean-ups with stronger storytelling, campaign visuals, and event visibility."
   },
   {
-    name: "One Follower = One Plant",
-    description: "A signature campaign that connects social growth to a direct and meaningful environmental promise."
+    title: "One Follower = One Plant",
+    tag: "Signature Campaign",
+    text: "Transform the brand promise into a campaign people instantly understand and want to support."
   },
   {
-    name: "Volunteer Event Coverage",
-    description: "Photo, video, and highlight content from on-ground events that builds trust and local engagement."
+    title: "Tree Planting Drives",
+    tag: "Environmental Impact",
+    text: "Show planting progress, volunteer moments, and long-term impact in a more polished public format."
   }
 ];
 
 const channels = ["TikTok", "Instagram", "Facebook", "YouTube"];
 
-const values = [
-  "Mission-led branding with a clear environmental purpose",
-  "Professional communication for partners, followers, and volunteers",
-  "A one-page foundation that can grow into a full website platform"
+const highlights = [
+  "Mission-first presentation",
+  "Professional public image",
+  "Creative campaign energy"
 ];
 
 export default function App() {
   return (
     <div className="site-shell" id="home">
-      <header className="header">
-        <div className="container nav-bar">
+      <header className="site-header">
+        <div className="container topbar">
           <a className="brand" href="#home">
             <img src="/mrvilz-logo.jpeg" alt="Mr Vilz logo" />
-            <div>
+            <div className="brand-text">
               <strong>Mr Vilz</strong>
               <span>Social Impact Media Group</span>
             </div>
@@ -60,7 +63,7 @@ export default function App() {
             <a href="#contact">Contact</a>
           </nav>
 
-          <a className="nav-cta" href="#contact">
+          <a className="nav-button" href="#contact">
             Get in touch
           </a>
         </div>
@@ -68,15 +71,17 @@ export default function App() {
 
       <main>
         <section className="hero-section">
-          <div className="container hero-grid">
+          <div className="container hero-layout">
             <div className="hero-copy">
-              <p className="eyebrow">Environmental storytelling with purpose</p>
-              <h1>A professional digital home for a mission that cleans beaches and plants for the future.</h1>
+              <p className="eyebrow">Environmental brand. Media movement. Real impact.</p>
+              <h1>
+                A sharper digital presence for a group that cleans beaches,
+                plants trees, and turns followers into action.
+              </h1>
               <p className="hero-text">
-                Mr Vilz combines social media, community action, and environmental
-                campaigns into one clear brand. This one-page website introduces
-                the mission with stronger structure, cleaner design, and a more
-                professional presence.
+                This direction mixes a professional structure with a stronger
+                campaign feel, so Mr Vilz looks credible, modern, and memorable
+                from the first screen.
               </p>
 
               <div className="hero-actions">
@@ -84,48 +89,55 @@ export default function App() {
                   Explore services
                 </a>
                 <a className="button button-secondary" href="#projects">
-                  View projects
+                  See projects
                 </a>
               </div>
 
-              <div className="channel-row">
+              <div className="channel-list">
                 {channels.map((channel) => (
                   <span key={channel}>{channel}</span>
                 ))}
               </div>
             </div>
 
-            <div className="hero-side">
-              <div className="mission-panel">
-                <p className="panel-label">Signature campaign</p>
+            <div className="hero-stack">
+              <article className="pledge-card">
+                <p className="card-label">Campaign promise</p>
                 <h2>One follower = one plant</h2>
                 <p>
-                  A simple promise that turns audience growth into measurable
-                  environmental action.
+                  A simple message with campaign power. Easy to understand. Easy
+                  to share. Hard to ignore.
                 </p>
-              </div>
+              </article>
 
-              <div className="logo-panel">
-                <img src="/mrvilz-logo.jpeg" alt="Mr Vilz brand mark" />
-              </div>
+              <article className="visual-card">
+                <div className="visual-image">
+                  <img src="/mrvilz-logo.jpeg" alt="Mr Vilz emblem" />
+                </div>
+                <div className="visual-meta">
+                  <span>Creative identity</span>
+                  <p>Built to feel bold, trusted, and movement-driven.</p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section className="stats-section">
-          <div className="container stats-grid">
-            <article>
-              <strong>4</strong>
-              <span>primary social platforms</span>
-            </article>
-            <article>
-              <strong>1</strong>
-              <span>clear environmental mission</span>
-            </article>
-            <article>
-              <strong>100%</strong>
-              <span>community-focused storytelling</span>
-            </article>
+        <section className="impact-ribbon">
+          <div className="container ribbon-layout">
+            <div className="ribbon-copy">
+              <p className="eyebrow">Positioning</p>
+              <h2>Professional enough for partners. Creative enough for campaigns.</h2>
+            </div>
+
+            <div className="highlight-list">
+              {highlights.map((item) => (
+                <div className="highlight-item" key={item}>
+                  <span className="highlight-dot" />
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -134,18 +146,19 @@ export default function App() {
             <div className="section-head">
               <div>
                 <p className="eyebrow">Services</p>
-                <h2>Built for a serious public-facing brand, not just a social page.</h2>
+                <h2>What the brand should communicate with confidence.</h2>
               </div>
               <p className="section-copy">
-                These services position Mr Vilz as a professional media and impact
-                brand while keeping the environmental mission at the center.
+                The website should present Mr Vilz like a serious impact brand,
+                not just a social page. These service blocks define that
+                message.
               </p>
             </div>
 
-            <div className="service-grid">
+            <div className="services-grid">
               {services.map((service) => (
-                <article className="card service-card" key={service.title}>
-                  <span className="card-index">{service.id}</span>
+                <article className="service-card" key={service.title}>
+                  <span className="service-number">{service.number}</span>
                   <h3>{service.title}</h3>
                   <p>{service.text}</p>
                 </article>
@@ -154,70 +167,74 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section section-soft" id="projects">
+        <section className="section projects-section" id="projects">
           <div className="container">
             <div className="section-head">
               <div>
                 <p className="eyebrow">Projects</p>
-                <h2>Environmental work that deserves strong presentation.</h2>
+                <h2>Real work on the ground deserves stronger presentation online.</h2>
               </div>
               <p className="section-copy">
-                The website should show real activity, real campaigns, and real
-                outcomes in a polished and trustworthy way.
+                These projects should feel like active campaigns with identity,
+                not placeholder content blocks.
               </p>
             </div>
 
-            <div className="project-grid">
+            <div className="projects-grid">
               {projects.map((project) => (
-                <article className="card project-card" key={project.name}>
-                  <div className="project-accent" />
-                  <h3>{project.name}</h3>
-                  <p>{project.description}</p>
+                <article className="project-card" key={project.title}>
+                  <p className="project-tag">{project.tag}</p>
+                  <h3>{project.title}</h3>
+                  <p>{project.text}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section" id="about">
-          <div className="container about-grid">
+        <section className="section about-section" id="about">
+          <div className="container about-layout">
             <div className="about-copy">
               <p className="eyebrow">About</p>
-              <h2>A one-page website that introduces the brand with clarity and credibility.</h2>
+              <h2>Mr Vilz should feel like a modern movement, not an unfinished page.</h2>
               <p className="section-copy">
-                This homepage is designed to feel more professional and structured.
-                It tells people who Mr Vilz is, what the group does, and why the
-                mission matters before we move into bigger features.
+                This direction uses more discipline in the layout, stronger
+                typography, and cleaner section structure while keeping some
+                campaign energy in the visuals.
               </p>
             </div>
 
             <div className="about-panel">
-              {values.map((value) => (
-                <div className="about-item" key={value}>
-                  <span className="about-dot" />
-                  <p>{value}</p>
-                </div>
-              ))}
+              <div className="about-stat">
+                <strong>4</strong>
+                <span>core channels</span>
+              </div>
+              <div className="about-stat">
+                <strong>1</strong>
+                <span>mission-led brand</span>
+              </div>
+              <div className="about-stat">
+                <strong>100%</strong>
+                <span>community-based impact</span>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="section" id="contact">
-          <div className="container">
-            <div className="contact-banner">
-              <div>
-                <p className="eyebrow">Contact</p>
-                <h2>Ready to build the full website after this front page.</h2>
-                <p className="section-copy">
-                  Next we can add uploads, event pages, impact counters, image
-                  galleries, and a full management dashboard.
-                </p>
-              </div>
-
-              <a className="button button-primary" href="#home">
-                Back to top
-              </a>
+        <section className="section contact-section" id="contact">
+          <div className="container contact-banner">
+            <div className="contact-copy">
+              <p className="eyebrow">Contact</p>
+              <h2>After this look is approved, we can build the full website properly.</h2>
+              <p className="section-copy">
+                Next steps can include uploads, event pages, progress counters,
+                galleries, admin tools, and campaign management.
+              </p>
             </div>
+
+            <a className="button button-primary" href="#home">
+              Back to top
+            </a>
           </div>
         </section>
       </main>
