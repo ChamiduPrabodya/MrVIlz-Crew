@@ -29,11 +29,11 @@ export default function OngoingProjectsSection() {
                 {project.theme === "seabed" ? (
                   <div className="project-art-seabed">
                     <div className="seabed-cup" />
-                    <span>Cleaner Seabeds for Sri Lanka</span>
+                    <span>Cleaner panadura beach SRI LANKA</span>
                   </div>
                 ) : (
                   <div className="project-art-nurdle">
-                    <span className="nurdle-title">nurdle free lanka</span>
+                    <span className="nurdle-title">Plants donetion</span>
                     <span className="nurdle-subtitle">
                       volunteer campaign against plastic pellets
                     </span>

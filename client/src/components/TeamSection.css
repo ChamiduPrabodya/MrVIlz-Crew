@@ -1,0 +1,230 @@
+.mr-team-section {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0 110px;
+  background:
+    radial-gradient(circle at top, rgba(120, 182, 104, 0.14), transparent 28%),
+    radial-gradient(circle at 18% 70%, rgba(56, 112, 79, 0.16), transparent 22%),
+    linear-gradient(180deg, #0d1712 0%, #101d17 38%, #0c1411 100%);
+}
+
+.mr-team-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 90%);
+  pointer-events: none;
+}
+
+.mr-team-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.mr-team-heading {
+  max-width: 780px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.mr-team-kicker {
+  margin: 0 0 14px;
+  color: #9fd08f;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.mr-team-heading h2 {
+  max-width: none;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  color: #f5fbf0;
+}
+
+.mr-team-intro {
+  margin: 18px 0 0;
+  color: rgba(225, 237, 220, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.mr-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.mr-team-card {
+  overflow: hidden;
+  border: 1px solid rgba(168, 203, 149, 0.14);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(13, 24, 18, 0.98) 100%);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.36);
+  cursor: pointer;
+}
+
+.mr-team-card-media {
+  aspect-ratio: 0.88;
+  overflow: hidden;
+  background: #111b14;
+}
+
+.mr-team-card-image,
+.mr-team-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mr-team-card-copy {
+  padding: 20px 22px 24px;
+}
+
+.mr-team-card-copy h3,
+.mr-team-detail-copy h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.35rem;
+}
+
+.mr-team-card-copy p,
+.mr-team-detail-copy > p {
+  margin: 10px 0 0;
+  color: rgba(233, 245, 225, 0.72);
+  line-height: 1.6;
+}
+
+.mr-team-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(7, 14, 10, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.mr-team-overlay-backdrop {
+  width: min(1040px, 100%);
+}
+
+.mr-team-detail-card {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  overflow: hidden;
+  border: 1px solid rgba(168, 203, 149, 0.16);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at top left, rgba(141, 197, 125, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(18, 31, 23, 0.98) 0%, rgba(11, 19, 15, 0.98) 100%);
+  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.42);
+}
+
+.mr-team-detail-media {
+  min-height: 100%;
+  background: #131d17;
+}
+
+.mr-team-detail-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px;
+}
+
+.mr-team-detail-label {
+  margin: 0 0 12px;
+  color: #9fd08f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mr-team-detail-bio {
+  margin-top: 18px;
+  color: rgba(234, 243, 228, 0.78);
+  line-height: 1.8;
+}
+
+.mr-team-focus-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.mr-team-focus-list span {
+  padding: 10px 14px;
+  border: 1px solid rgba(168, 203, 149, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ebf6e5;
+  font-size: 0.92rem;
+}
+
+.mr-team-close {
+  align-self: flex-start;
+  margin-top: 28px;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mr-team-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 980px) {
+  .mr-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mr-team-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .mr-team-detail-media {
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 720px) {
+  .mr-team-section {
+    padding: 70px 0 82px;
+  }
+
+  .mr-team-heading {
+    margin-bottom: 30px;
+  }
+
+  .mr-team-intro {
+    font-size: 0.98rem;
+  }
+
+  .mr-team-card-copy {
+    padding: 18px 18px 20px;
+  }
+
+  .mr-team-overlay {
+    padding: 14px;
+  }
+
+  .mr-team-detail-copy {
+    padding: 22px;
+  }
+}
