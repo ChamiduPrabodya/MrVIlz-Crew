@@ -1,9 +1,10 @@
 import useScrollReveal from "../hooks/useScrollReveal";
 
 const paragraphs = [
-  "We are an organisation dedicated to the conservation and protection of the Sri Lankan coastal belt and marine life in all its forms. Striving to make a difference, by initiating educational programs, actively implementing projects, and taking part in meaningful environmental work, Mr Vilz uses its resources for the betterment of Sri Lanka's natural habitats.",
-  "We consist of dedicated professionals and a growing team of active volunteers who continue to support awareness, restoration, and long-term public involvement.",
-  "Would you like to be part of making a difference?"
+  "MrVilz Nature is a Sri Lankan youth-led environmental team dedicated to protecting nature through beach cleanups, tree planting, and awareness activities.",
+  "We believe small actions can create a big change. Through our projects and social media, we inspire people to protect Sri Lanka’s beaches, forests, wildlife, and natural beauty.",
+  "Our team consists of passionate individuals and volunteers who are committed to making a positive impact on nature and society.",
+  "Would you like to be a part of making Sri Lanka cleaner, greener, and more beautiful?"
 ];
 
 export default function WhatWeDoSection() {
@@ -38,9 +39,9 @@ export default function WhatWeDoSection() {
           </div>
 
           <div className="what-we-do-actions stagger-item" style={{ "--delay": "240ms" }}>
-            <a className="button button-outline-water" href="#team">
+            {/* <a className="button button-outline-water" href="#team">
               Learn More
-            </a>
+            </a> */}
             <a className="button button-outline-water" href="#projects">
               Get Involved
             </a>

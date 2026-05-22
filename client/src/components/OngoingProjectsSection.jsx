@@ -4,12 +4,17 @@ const ongoingProjects = [
   {
     title: "Clean panadura beach SRI LANKA",
     progress: 46,
-    theme: "seabed"
+    theme: "seabed",
+    summary: "A coastal cleanup effort focused on reducing waste, protecting the shoreline, and building stronger community action around a cleaner beach environment.",
+    highlights: ["Beach cleanup", "Volunteer action", "Coastal protection"]
   },
   {
     title: "plants donation campaign",
     progress: 84,
-    theme: "nurdle"
+    theme: "plant",
+    image: "/images/plant.PNG",
+    summary: "A greening campaign that encourages communities to plant, nurture, and protect young trees for a healthier and cleaner future.",
+    highlights: ["Plant today", "Nurture growth", "Protect nature"]
   }
 ];
 
@@ -22,11 +27,19 @@ function OngoingProjectCard({ project, delay }) {
       className={`ongoing-project-card scroll-reveal ${isVisible ? "is-visible" : ""}`}
       style={{ "--delay": delay }}
     >
-      <div className="ongoing-project-art" aria-hidden="true">
+      <div className={`ongoing-project-art ongoing-project-card-${project.theme}`} aria-hidden="true">
         {project.theme === "seabed" ? (
           <div className="project-art-seabed">
             <div className="seabed-cup" />
             <span>Cleaner panadura beach SRI LANKA</span>
+          </div>
+        ) : project.theme === "plant" ? (
+          <div className="ongoing-project-image-frame">
+            <img
+              className="ongoing-project-image"
+              src={project.image}
+              alt=""
+            />
           </div>
         ) : (
           <div className="project-art-nurdle">
@@ -39,6 +52,16 @@ function OngoingProjectCard({ project, delay }) {
 
         <div className="ongoing-project-titlebar">
           <h3>{project.title}</h3>
+        </div>
+      </div>
+
+      <div className={`project-detail-panel ${isVisible ? "is-visible" : ""}`}>
+        <p>{project.summary}</p>
+
+        <div className="project-detail-tags">
+          {project.highlights.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
         </div>
       </div>
 
